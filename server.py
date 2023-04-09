@@ -21,7 +21,7 @@ PROXY_AUTH = aiohttp.BasicAuth(
 )
 ACCESS_ID = os.getenv("TELEGRAM_ACCESS_ID")
 
-bot = Bot(token=API_TOKEN, proxy=PROXY_URL, proxy_auth=PROXY_AUTH)
+bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
 dp.middleware.setup(AccessMiddleware(ACCESS_ID))
 
